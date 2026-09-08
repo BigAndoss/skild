@@ -44,7 +44,11 @@ export const SkillCard = ({
 						/>
 						<div className="author-copy">
 							<p>Andoss</p>
-							<p>{new Date(createdAt as string).toLocaleDateString()}</p>
+							<p>
+								{createdAt
+									? new Date(createdAt).toLocaleDateString()
+									: "Date unavailable"}
+							</p>
 						</div>
 					</div>
 					<p className="category"> {category}</p>
